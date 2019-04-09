@@ -1,0 +1,12 @@
+<br>
+<hr>
+
+<h3>Before Optimization</h3>
+
+<div class="message-container">
+  <ul>
+    <li *ngFor="let message of messages">{{message.content}}</li>
+  </ul>
+</div>
+<br>
+<button (click)="addNewRandomMessage()">Add New Message</button>
