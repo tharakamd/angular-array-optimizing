@@ -4,15 +4,18 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ArrayNotOptimizedComponent} from './array-not-optimized/array-not-optimized.component';
+import {ArrayOptimizedComponent} from './array-optimized/array-optimized.component';
 
 const appRoutes: Routes = [
-  {path: 'not-optimized', component: ArrayNotOptimizedComponent}
+  {path: 'not-optimized', component: ArrayNotOptimizedComponent},
+  {path: 'optimized', component: ArrayOptimizedComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArrayNotOptimizedComponent
+    ArrayNotOptimizedComponent,
+    ArrayOptimizedComponent
   ],
   imports: [
     BrowserModule,

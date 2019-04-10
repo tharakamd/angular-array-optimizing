@@ -3,11 +3,11 @@
 
 <div></div>
 
-<h3>Before Optimization</h3>
+<h3>After Optimization</h3>
 
 <div class="message-container">
   <ul>
-    <li *ngFor="let message of chatMessages">{{message.content}}</li>
+    <li *ngFor="let message of chatMessages; trackBy: trackChatMessage">{{message.content}}</li>
   </ul>
 </div>
 <br>

@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {ChatMessage} from '../chat-message';
 
 @Component({
-  selector: 'app-array-not-optimized',
-  templateUrl: './array-not-optimized.component.html',
-  styleUrls: ['./array-not-optimized.component.css']
+  selector: 'app-array-optimized',
+  templateUrl: './array-optimized.component.html',
+  styleUrls: ['./array-optimized.component.css']
 })
-export class ArrayNotOptimizedComponent implements OnInit {
+export class ArrayOptimizedComponent implements OnInit {
 
   chatMessages: ChatMessage[] = [];
 
@@ -33,6 +33,10 @@ export class ArrayNotOptimizedComponent implements OnInit {
 
   }
 
+  trackChatMessage(index: number, chatMessage: ChatMessage) {
+    return chatMessage.id;
+  }
+
   private fillInitialArray() {
     this.chatMessages.push(new ChatMessage(0, 'Hi'));
     this.chatMessages.push(new ChatMessage(1, 'Hi !!!'));
@@ -40,4 +44,5 @@ export class ArrayNotOptimizedComponent implements OnInit {
     this.chatMessages.push(new ChatMessage(3, 'Noop'));
     this.chatMessages.push(new ChatMessage(4, 'Just optimizing some arrays :P'));
   }
+
 }
