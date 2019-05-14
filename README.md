@@ -1,4 +1,4 @@
-# Angular ngFor rendering optimization
+# Angular ngFor Rendering Optimization
 
 This is the demo project related to the following Medium article about Angular ngFor optimization with track-by
 
